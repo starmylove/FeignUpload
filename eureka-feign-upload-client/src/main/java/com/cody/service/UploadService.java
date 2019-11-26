@@ -21,7 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 @FeignClient(value = "eureka-feign-upload-server", configuration = UploadService.MultipartSupportConfig.class)
 public interface UploadService {
 
-    @PostMapping(value = "uploagFile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @PostMapping(value = "uploadFile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     String handleFileUpload(@RequestPart(value = "file") MultipartFile file);
 
     @Configuration
